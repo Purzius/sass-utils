@@ -1,0 +1,42 @@
+/* clearfix */
+@mixin clearfix {
+    clear: both;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin msg-container {
+    border-radius: 0;
+    padding: 1rem;
+    margin-bottom: 15px;
+
+    ul { margin: 0; }
+}
+
+// vertical align
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+}
+
+// hide text show on overflow
+@mixin text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        overflow: visible;
+    }
+}
+
+// box-shadow
+@mixin box-shadow-light {
+    box-shadow: 0 0 0.4rem rgba($color: $cl-gray-lighter, $alpha: 0.7);
+}
