@@ -8,14 +8,6 @@
     }
 }
 
-@mixin msg-container {
-    border-radius: 0;
-    padding: 1rem;
-    margin-bottom: 15px;
-
-    ul { margin: 0; }
-}
-
 // vertical align
 @mixin vertical-align($position: relative) {
   position: $position;

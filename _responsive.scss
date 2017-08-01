@@ -1,13 +1,13 @@
 $size-xs: 480px;
 $size-sm: 768px;
+$size-md: 992px;
 $size-lg: 1200px;
 $size-xl: 1600px;
 
-$size-xs-max: 767px;
-$size-sm-max: 991px;
-$size-md: 992px;
-$size-md-max: 1199px;
-$size-lg-max: 1599px;
+$size-xs-max: $size-sm - 1px;
+$size-sm-max: $size-md - 1px;
+$size-md-max: $size-lg - 1px;
+$size-lg-max: $size-xl - 1px;
 
 
 
@@ -54,6 +54,12 @@ $size-lg-max: 1599px;
 /* Large Devices, Wide Screens */
     @mixin large-and-up {
         @media only screen and (min-width : $size-lg) {
+            @content;
+        }
+    }
+
+    @mixin large-only {
+        @media only screen and (min-width : $size-lg) and (max-width: $size-lg-max) {
             @content;
         }
     }
